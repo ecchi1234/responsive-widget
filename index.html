@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Responsive Widget</title>
-  </head>
-  <body>
-    <div class="container pt-2 pb-2">
-      <div class="row">
-        <h2 class="text-primary">Một đồ thị bất kỳ</h2>
-        <div class="col-12">
-          <div class="row">
-            <div class="col-6">
-                <label for="width" class="form-label">Chiều rộng</label>
-                <input type="text" id="width" class="form-control" name="width">
-            </div>
-            <div class="col-6">
-              <label for="height" class="form-label">Chiều dài</label>
-              <input type="text" id="height" class="form-control" name="height">
-          </div>
-          </div>
-          <div class="row mt-2">
-            <div class="col-4">
-              <button type="button" class="btn btn-primary" id="change-size-btn">Xác nhận</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="chart-container" style="position: relative">
-            <canvas id="chart"></canvas>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <h2 class="text-primary">Component dạng bảng</h2>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/gridstack@4.2.7/dist/gridstack.min.css" rel="stylesheet" />
+  <!-- HTML5 drag&drop (68k) -->
+  <script src="https://cdn.jsdelivr.net/npm/gridstack@4.2.7/dist/gridstack-h5.js"></script>
+  <title>Responsive Widget</title>
+</head>
+
+<body>
+  <div class="container pt-2 pb-2">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-6">
+            <label for="width" class="form-label">Chiều rộng</label>
+            <input type="text" id="width" class="form-control" name="width">
+          </div>
+          <div class="col-6">
+            <label for="height" class="form-label">Chiều dài</label>
+            <input type="text" id="height" class="form-control" name="height">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-4">
+            <button type="button" class="btn btn-primary" id="change-size-btn">Xác nhận</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
-  <script src="./main.js"></script>
+    <div class="grid-stack">
+      <div class="grid-stack-item" gs-w="12" gs-h="6">
+        <div class="grid-stack-item-content chart-container" style="position: relative; width:100%; height: 100%">
+          <canvas id="chart"></canvas>
+        </div>
+      </div>
+    </div>
+</body>
+<script type="text/javascript" src="./main.js"></script>
+
 </html>

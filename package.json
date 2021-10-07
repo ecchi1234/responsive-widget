@@ -1,0 +1,22 @@
+{
+  "name": "responsive-widget",
+  "version": "1.0.0",
+  "description": "Responsive Widget",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecchi1234/responsive-widget.git"
+  },
+  "author": "chinn5",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecchi1234/responsive-widget/issues"
+  },
+  "homepage": "https://github.com/ecchi1234/responsive-widget#readme",
+  "dependencies": {
+    "gridstack": "^4.2.7"
+  }
+}
