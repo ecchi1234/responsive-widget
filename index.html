@@ -21,27 +21,30 @@
 <body>
   <div class="container pt-2 pb-2">
     <div class="row">
-      <div class="col-12">
-        <div class="row">
-          <div class="col-6">
-            <label for="width" class="form-label">Chiều rộng</label>
-            <input type="text" id="width" class="form-control" name="width">
+      <form>
+
+        <div class="col-12">
+          <div class="row">
+            <div class="col-6">
+              <label for="width" class="form-label">Chiều rộng</label>
+              <input type="number" id="width" class="form-control" name="width" max=12>
+            </div>
+            <div class="col-6">
+              <label for="height" class="form-label">Chiều dài</label>
+              <input type="number" id="height" class="form-control" name="height" max=12>
+            </div>
           </div>
-          <div class="col-6">
-            <label for="height" class="form-label">Chiều dài</label>
-            <input type="text" id="height" class="form-control" name="height">
+          <div class="row mt-2">
+            <div class="col-4">
+              <button type="button" class="btn btn-primary" id="change-size-btn">Xác nhận</button>
+            </div>
           </div>
         </div>
-        <div class="row mt-2">
-          <div class="col-4">
-            <button type="button" class="btn btn-primary" id="change-size-btn">Xác nhận</button>
-          </div>
-        </div>
-      </div>
+      </form>
     </div>
-    <div class="grid-stack">
+    <div class="grid-stack mb-3">
       <div class="grid-stack-item" gs-w="12" gs-h="6">
-        <div class="grid-stack-item-content chart-container" style="position: relative; width:100%; height: 100%">
+        <div class="grid-stack-item-content chart-container" style="position: relative; width:100%; height:100%">
           <canvas id="chart"></canvas>
         </div>
       </div>
