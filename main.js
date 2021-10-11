@@ -26,14 +26,14 @@ const myChart = new Chart(document.getElementById("chart"), config);
 const changeSizeButton = document.getElementById("change-size-btn");
 // initial width and height
 const chartContainer = document.getElementsByClassName("grid-stack-item")[0];
-// chartContainer.style.width = `1000px`;
-// chartContainer.style.height = `500px`;
 changeSizeButton.addEventListener("click", () => {
   const width = document.getElementById("width").value;
   const height = document.getElementById("height").value;
   if (width && height) {
     chartContainer.setAttribute("gs-w", `${width}`);
     chartContainer.setAttribute("gs-h", `${height}`);
+    const gridStack = document.getElementsByClassName("grid-stack")[0];
+    gridStack.setAttribute("gs-current-row", `${height}`);
   }
 });
 
